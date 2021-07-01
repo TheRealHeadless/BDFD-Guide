@@ -1,0 +1,27 @@
+$c[If w/else Command]
+$nomention
+$if[$getUserVar[dog]==0]
+I have no dog
+$else
+I have a dog
+$endif
+
+$c[If w/else if Command]
+$nomention
+$if[$getUserVar[dog]==0]
+I have no dog
+$else
+$if[$getUserVar[dog]==1]
+I have a dog
+$else
+I have more than one dog
+$endif
+$endif
+
+$c[If w/replaceText Command]
+$c[This requires Unstable]
+$nomention
+$replaceText[$replaceText[$getUserVar[dog];0;I have no dog];1;I have a dog]
+
+$c[All of these commands above requires a variable]
+$c[And this is an example, so you can replace "dog" with a variable you made]
